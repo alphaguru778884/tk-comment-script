@@ -1,0 +1,70 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.madhub.tkcommentscript">
+
+    <!-- 
+        Application Name: tk comment script - Android Automation Tool
+        This application serves as a powerful Android automation tool, enabling users to manage social media interactions efficiently.
+    -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="tk comment script - Android Automation Tool"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <!-- 
+            MainActivity:
+            This component serves as the entry point for the application, allowing users to access all features of the tk comment script.
+            It provides a user-friendly interface for configuring automation options.
+        -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 
+            AutomationService:
+            This service runs in the background, facilitating 24/7 automated operations.
+            It handles content scheduling and precise management of social media interactions across supported platforms.
+        -->
+        <service android:name=".AutomationService"
+            android:exported="true" />
+
+    </application>
+
+    <!-- 
+        Permission Declarations:
+        Declare necessary permissions to ensure comprehensive capabilities for social media management and automation.
+    -->
+
+    <!-- 
+        INTERNET Permission:
+        This powerful permission enables network access, which is essential for sending and receiving data from social media platforms.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 
+        ACCESS_NETWORK_STATE Permission:
+        This permission grants the app the ability to check the current network status, ensuring optimal connectivity during automation tasks.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 
+        WRITE_EXTERNAL_STORAGE Permission:
+        This comprehensive capability allows the app to store and manage content locally, enhancing the user experience with saved configurations and logs.
+    -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 
+        READ_EXTERNAL_STORAGE Permission:
+        This permission enables the application to read content from external storage, essential for importing data used in automation workflows.
+    -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+</manifest>
+```
